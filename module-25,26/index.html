@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+    </header>
+    <main class="main" id="main">
+      <!-- <section>
+        <h1>My Awesome DOM de baba</h1>
+        <ul>
+          <li>jalil set</li>
+          <li>shafayet</li>
+          <li>bonobash</li>
+        </ul>
+      </section>
+      <section>
+        <h1>fruits item</h1>
+        <ul id="fruits" class="blue-busy green orange">
+          <li class="important" id="p2">shafayet</li>
+          <li class="important">bonobash</li>
+          <li class="important">jalil set</li>
+        </ul>
+      </section>
+      <section>
+        <h1 onclick="console.log('iam clicked');">fast food item</h1>
+        <ul>
+          <li>jalil set</li>
+          <li>shafayet</li>
+          <li>bonobash</li>
+        </ul>
+      </section> -->
+
+      <!-- <button onclick="makeRed()">make red</button>
+
+      <button onclick="document.body.style.backgroundColor = 'yellow'">make yellow</button>
+
+      <button id="makeblue">make blue</button>
+
+      <button id="makePurple">Make Purple</button>
+      <button id="makePink">Make Pink</button>
+      <button id="makeGreen">Make Green</button>
+      <button id="makeGoldenRod">Make GoldenRod</button> -->
+      <!-- <form action=""> -->
+        <p id="text">Default name john mark</p>
+        <input id="inputField" type="text" >
+        <button id="updateButton">Update</button>
+      <!-- </form> -->
+    </main>
+    <script src="dom.js"></script>
+    <script src="styleInJs.js"></script>
+    <!-- <script src="event.js"></script> -->
+    <script>
+      const updateButton = document.getElementById('updateButton').addEventListener('click',function(){
+        const inputField = document.getElementById('inputField')
+        const inputText = inputField.value;
+        // console.log(inputField.value);
+        const p = document.getElementById('text')
+        p.innerText = inputText
+        inputField.value = ''
+
+      })
+    
+    
+    </script>
+  </body>
+</html>

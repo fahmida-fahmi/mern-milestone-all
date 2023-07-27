@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section >
+        <h1>Please leave a comment</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima vel, sapiente corporis sit iste eum! Omnis veritatis fuga voluptatem voluptas est, officiis ullam, reprehenderit architecto corrupti sint, maiores accusantium amet?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima vel, sapiente corporis sit iste eum! Omnis veritatis fuga voluptatem voluptas est, officiis ullam, reprehenderit architecto corrupti sint, maiores accusantium amet?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima vel, sapiente corporis sit iste eum! Omnis veritatis fuga voluptatem voluptas est, officiis ullam, reprehenderit architecto corrupti sint, maiores accusantium amet?</p>
+
+    </section>
+    <section id="section">
+        
+    </section>
+    <textarea id="comment" cols="30" rows="10"></textarea>
+    <button id="post">Post</button>
+    <script>
+        document.getElementById('post').addEventListener('click',function(){
+            const commentArea = document.getElementById('comment')
+            
+            // console.log(sectionComment);
+            // const commentHeader = document.createElement('h1')
+            // commentHeader.innerText = 'Comment'
+            const commentParagraph = document.createElement('p')
+            // commentParagraph.setAttribute('id','commentParagraph')
+            const commentText = commentArea.value
+            // console.log(commentText);
+            const sectionComment = document.getElementById('section')
+            // sectionComment.appendChild(commentHeader)
+            sectionComment.appendChild(commentParagraph)
+            // console.log(sectionComment);
+            // const getCommentText = document.getElementById('commentParagraph')
+
+            commentParagraph.innerText = commentText
+            commentArea.value= ''
+            
+        })
+    </script>
+</body>
+</html>

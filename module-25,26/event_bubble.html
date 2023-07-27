@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            border: 2px solid tomato;
+        }
+        body{
+            border: 2px solid purple;
+        }
+        section{
+            border: 2px solid green;
+        }
+        #item-2{
+            border: 2px solid tomato;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>This is the earth</h1>
+    <section id="section">
+        <h1 id="h1">
+            This is my area
+        </h1>
+        <ul id="ul">
+            <h1>This is my house</h1>
+            <li id="item-1">This is bro's room</li>
+            <li id="item-2">This is my room</li>
+            <li id="item-3">This is sis's room</li>
+            <li id="item-4">This is kitchen</li>
+            <li id="item-5">This is bathroom</li>
+        </ul>
+    </section>
+    <script>
+        
+        
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log("I clicked first to item-2");
+            event.stopImmediatePropagation()
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log("I clicked second to item-2");
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log("I clicked third to item-2");
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log("I clicked fourth to item-2");
+        })
+
+        document.getElementById('ul').addEventListener('click',function(){
+            console.log("I clicked to ul");
+        })
+        document.getElementById('section').addEventListener('click',function(){
+            console.log("I clicked to section");
+        })
+        document.getElementById('body').addEventListener('click',function(){
+            console.log("I clicked to body");
+        })
+    </script>
+</body>
+</html>

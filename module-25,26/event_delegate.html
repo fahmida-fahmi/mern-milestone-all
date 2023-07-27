@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <ul id="ul">
+            <li class="item">I am fahmida</li>
+            <li class="item">america</li>
+            <li class="item">india</li>
+            <li class="item">dhaka</li>
+            <li class="item">bangladesh</li>
+        </ul>
+        <button id="btn">Add new </button>
+    </section>
+    <script>
+        document.getElementById('ul').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target)
+            // console.log(event.target);
+        })
+        // const items = document.getElementsByClassName('item')
+
+        // for (let item of items) {
+        //     item.addEventListener('click', function (event) {
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }
+
+        document.getElementById('btn').addEventListener('click', function () {
+            const li = document.createElement('li')
+            // li.classList.add('item')
+            li.innerText = 'Brand New Item'
+            const ul = document.getElementById('ul')
+            ul.append(li)
+        })
+    </script>
+</body>
+
+</html>

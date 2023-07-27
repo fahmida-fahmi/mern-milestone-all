@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Text Editor</title>
+
+    <style>
+        i,
+        input[type='color'] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-purple-500 w-9/12 mx-auto my-20 pb-10">
+        <h2 class="text-center text-3xl py-5 text-white font-semibold">My Text Editor</h2>
+        <div class="w-2/3 mx-auto border-2 border-cyan-500 p-5 bg-purple-200">
+            <div class="flex justify-between  ">
+                <div>
+
+
+
+                    <i id="bold" class="text-2xl px-3 fa-sharp fa-solid fa-bold"></i>
+                    <i id="italic" class="text-2xl px-3 fa-sharp fa-solid fa-italic"></i>
+                    <i id="underline" class="text-2xl px-3 fa-sharp fa-solid fa-underline"></i>
+
+                </div>
+                <div>
+                    <i id="align-left" class="text-2xl px-3 fa-solid fa-align-left"></i>
+                    <i id="align-center" class="text-2xl px-3 fa-solid fa-align-center"></i>
+                    <i id="align-right" class="text-2xl px-3 fa-solid fa-align-right"></i>
+                    <i id="align-justify" class="text-2xl  px-3 fa-solid fa-align-justify"></i>
+                </div>
+                <div>
+                    <input id="number" type="number" style="Width: 40px; font-size: 18px;" value="18" >
+                    <!-- <i class="fa-solid fa-font-case"></i> -->
+                    <input type="color" name="" id="color" class="w-sm">
+                </div>
+            </div>
+            <div class="border-b-2 border-black my-5"></div>
+            <textarea name="" id="text" class="w-full h-96 p-2"></textarea>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

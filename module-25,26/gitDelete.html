@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 id="header">This is a hidden file</h1>
+        <input id="input-text" type="text">
+        <button id="delete-btn" disabled>Delete</button>
+
+    </section>
+
+    <script>
+        document.getElementById('input-text').addEventListener('keyup', function(event){
+            const text = event.target.value
+            // const textCase = text.value.toUpperCase()
+            const deleteButton = document.getElementById('delete-btn')
+            if(text === 'delete'){
+                deleteButton.removeAttribute('disabled')
+            }
+            else{
+                deleteButton.setAttribute('disabled', true)
+            }
+        })
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            document.getElementById('header').style.display = 'none';
+            document.getElementById('input-text').value = ''
+
+        })
+    </script>
+</body>
+</html>
